@@ -4,11 +4,16 @@
     "r13" "r14" "r15" "r16" "r17" "r18" "r19" "r20" "r21" "r22" "r23" "r24"
     "r25" "r26" "r27" "r28" "r29" "r30" "r31"
 
-    "zero" "v0" "v1" "v2" "v3" "v4" "v5" "v6" "v7" "a0" "a1" "k0" "k1"
+    "zero"
+    "a0" "a1" "a2" "a3" "a4" "a5" "a6" "a7"
+    "s0" "s1" "s2" "s3" "s4" "s5" "s6"
+    "t0" "t1" "t2" "t3" "t4" "t5" "t6"
+    "v0" "v1"
+    "k0" "k1"
     "at" "sp" "gp" "fp" "ra"
 
     ;; special reg
-    "isa" "vendorid" "status" "trapvec" "inten" "epc" "cause"
+    "isa" "vendorid" "status" "cause" "trapvec" "epc" "pc"
 
     ;; -----------------------------------------------------------------
     ;;  FPU
@@ -35,8 +40,6 @@
 
     "mvsrw" "mvsrr"
 
-    "nop"
-
     "sb" "sh" "sw"
 
     "sll" "sllr" "sra" "srar" "srl" "srlr"
@@ -49,7 +52,7 @@
     "abs.f" "add.f" "div.f" "mod.f" "mult.f" "neg.f" "sub.f"))
 
 (defconst athena-pseudo-instructions
-  '("b" "beqz" "bgtz" "bltz" "bnez" "la" "li"))
+  '("b" "beqz" "bgtz" "bltz" "bnez" "la" "li" "nop"))
 
 (defconst athena-constants
   "\\<$?[-+]?[0-9][-+_0-9A-Fa-fHhXxDdTtQqOoBbYyeE.]*\\>")
